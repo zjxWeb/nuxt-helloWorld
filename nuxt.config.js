@@ -8,7 +8,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title:"章建雄的NUXT",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,14 +28,18 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/css/style.css',
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/vue-notifications',
+    '@/plugins/vue-inject.js',
+    '@/plugins/ctx-inject.js'
   ],
 
   /*
@@ -54,6 +58,11 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-    }
+    },
+    vendor:['axios']//只打包一次
+
+  },
+  router:{
+    middleware: 'auth'
   }
 }

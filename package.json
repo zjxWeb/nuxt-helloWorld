@@ -11,12 +11,16 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0",
+    "element-ui": "^2.4.11",
     "express": "^4.16.4",
-    "element-ui": "^2.4.11"
+    "nuxt": "^2.4.0",
+    "vue-notifications": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
   }
 }
